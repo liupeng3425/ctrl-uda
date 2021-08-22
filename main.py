@@ -19,9 +19,9 @@ def main():
     parser.add_argument('--expid', type=int, default=1, help='experiment id')
     parser.add_argument('--reso', type=str, default='FULL', help='inputs resolution full or low')
     parser.add_argument('--isl', type=str, default='false', help='activate the ISL training')
-    parser.add_argument('--exp_root_dir', type=str, help='experiment root folder')
-    parser.add_argument('--data_root', type=str, help='dataset root folder')
-    parser.add_argument('--pret_model', type=str, help='pretrained weights to be used for initialization')
+    parser.add_argument('--exp_root_dir', type=str, default='experiments', help='experiment root folder')
+    parser.add_argument('--data_root', type=str, default='data', help='dataset root folder')
+    parser.add_argument('--pret_model', type=str, default='pretrained_model/DeepLab_resnet_pretrained_imagenet.pth', help='pretrained weights to be used for initialization')
     cmdline_inputs = parser.parse_args()
     expid = cmdline_inputs.expid
     if expid == 1:
